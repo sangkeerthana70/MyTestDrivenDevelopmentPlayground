@@ -10,6 +10,13 @@ namespace TDDPlayground
     {
         static void Main(string[] args)
         {
+            /*
+            string result = SpeedingIfElse.IssueSpeedTicket(100);
+            Console.WriteLine(result);
+            Console.ReadLine();
+            */
+
+
             //TDD Phase
             int speed;
             string ticket;
