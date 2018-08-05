@@ -26,11 +26,20 @@ namespace FindTriangleType
 
         }
 
-        public static string isIsoscelesTriangle(int a, int b, int c)
+        public static string IsoscelesTriangle(int a, int b, int c)
         {
             return "";
         }
 
+        public static string ScaleneTriangle(int l, int m, int n)
+        {
+            return "";
+        }
+
+        public static string EquilateralTriangle(int o, int p, int q)
+        {
+            return "";
+        }
 
 
     }

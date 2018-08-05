@@ -9,10 +9,10 @@ namespace FindTriangleType
 {
     class FindTriangleTest
     {
-        [TestCase(10,10,10)]
-        [TestCase(20,10,20)]
-        [TestCase(40,20,40)]
-        public void Is_Triangle(int a, int b, int c) 
+        [TestCase(10, 10, 10)]
+        [TestCase(20, 10, 20)]
+        [TestCase(40, 20, 40)]
+        public void Is_Triangle(int a, int b, int c)
         {
             string isTriangle = FindTriangle.TriangleType(a, b, c);
             Assert.AreEqual("It is a triangle", isTriangle);
@@ -30,6 +30,13 @@ namespace FindTriangleType
 
         }
 
-        
+        //Isosceles Triangle has two sides equal an should still satisfy the is Triangle condition
+        [TestCase(15, 15, 20)]
+        public void Is_Isosceles_Triangle(int a, int b, int c)
+        {
+            string isIsoscelestriangle = FindTriangle.IsoscelesTriangle(a, b, c);
+            Assert.AreEqual("It is a Isosceles triangle", isIsoscelestriangle);
+            Console.WriteLine(isIsoscelestriangle);
+        }
     }
 }
