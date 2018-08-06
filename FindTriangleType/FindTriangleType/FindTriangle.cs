@@ -39,7 +39,12 @@ namespace FindTriangleType
 
         public static string ScaleneTriangle(int l, int m, int n)
         {
-            return "";
+            if (l != m && l != n && m != n)
+            {
+                return "It is a Scalene triangle";
+            }
+            else 
+                return "It is not a Scalene triangle";
         }
 
         public static string EquilateralTriangle(int o, int p, int q)
