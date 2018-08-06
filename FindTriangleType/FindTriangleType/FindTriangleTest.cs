@@ -32,11 +32,21 @@ namespace FindTriangleType
 
         //Isosceles Triangle has two sides equal an should still satisfy the is Triangle condition
         [TestCase(15, 15, 20)]
+        [TestCase(35, 20, 20)]
+        [TestCase(15, 25, 15)]
         public void Is_Isosceles_Triangle(int a, int b, int c)
         {
             string isIsoscelestriangle = FindTriangle.IsoscelesTriangle(a, b, c);
-            Assert.AreEqual("It is a Isosceles triangle", isIsoscelestriangle);
+            Assert.AreEqual("It is an Isosceles triangle", isIsoscelestriangle);
             Console.WriteLine(isIsoscelestriangle);
+        }
+
+        [TestCase(15, 17, 20)]
+        public void Is_Not_Isosceles_Triangle(int a, int b, int c)
+        {
+            string isNotIsoscelestriangle = FindTriangle.IsoscelesTriangle(a, b, c);
+            Assert.AreEqual("It is not an Isosceles triangle", isNotIsoscelestriangle);
+            Console.WriteLine(isNotIsoscelestriangle);
         }
     }
 }

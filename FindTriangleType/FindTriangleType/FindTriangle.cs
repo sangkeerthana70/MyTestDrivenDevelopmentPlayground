@@ -28,7 +28,13 @@ namespace FindTriangleType
 
         public static string IsoscelesTriangle(int a, int b, int c)
         {
-            return "";
+            if ((a == b && a != c) || (b == c && b != a) || (c == a && c != b))
+            {
+                return "It is an Isosceles triangle";
+            }
+            else
+                return "It is not an Isosceles triangle";
+            
         }
 
         public static string ScaleneTriangle(int l, int m, int n)
