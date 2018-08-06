@@ -49,7 +49,13 @@ namespace FindTriangleType
 
         public static string EquilateralTriangle(int o, int p, int q)
         {
-            return "";
+
+            if(o == p && p == q)
+            {
+                return "It is an equilateral triangle";
+            }
+            else
+                return "It is not an equilateral triangle";
         }
 
 

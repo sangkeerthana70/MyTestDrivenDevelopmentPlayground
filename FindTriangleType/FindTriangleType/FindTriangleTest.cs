@@ -9,6 +9,7 @@ namespace FindTriangleType
 {
     class FindTriangleTest
     {
+        //A triangle is a figure when the sum of two sides is greater than the third side
         [TestCase(10, 10, 10)]
         [TestCase(20, 10, 20)]
         [TestCase(40, 20, 40)]
@@ -70,6 +71,22 @@ namespace FindTriangleType
 
         }
 
-        //
+        //Equilateral triangle is when all three sides are equal 
+        [TestCase(50, 50, 50)]
+        public void Is_Equilateral_Triangle(int o, int p, int q)
+        {
+            string isEquilateralTriangle = FindTriangle.EquilateralTriangle(o, p, q);
+            Assert.AreEqual("It is an equilateral triangle", isEquilateralTriangle);
+            Console.WriteLine(isEquilateralTriangle);
+        }
+
+        [TestCase(15, 25, 15)]//isosceles
+        [TestCase(15, 17, 20)]//scalene
+        public void Is_Not_Equilateral_Triangle(int o, int p, int q)
+        {
+            string isNotEquilateralTriangle = FindTriangle.EquilateralTriangle(o, p, q);
+            Assert.AreEqual("It is not an equilateral triangle", isNotEquilateralTriangle);
+            Console.WriteLine(isNotEquilateralTriangle);
+        }
     }
 }
