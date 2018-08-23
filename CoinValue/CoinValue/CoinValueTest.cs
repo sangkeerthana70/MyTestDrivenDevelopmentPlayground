@@ -48,6 +48,14 @@ namespace CoinValue
             Console.WriteLine(actual);
             Assert.AreEqual(expected, actual, "Result should return an integer");
         }
+        [TestCase("Cent")]
+        public void CentReturns1(string input)
+        {
+            var actual = coin.GetCoinValue(input);
+            var expected = 1;
+            Console.WriteLine(actual);
+            Assert.AreEqual(expected, actual);
+        }
 
 
     }

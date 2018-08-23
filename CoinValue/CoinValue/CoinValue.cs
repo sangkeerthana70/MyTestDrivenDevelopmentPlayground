@@ -31,6 +31,10 @@ namespace CoinValue
             {
                 return 5;
             }
+            else if (coin == "Cent")
+            {
+                return 1;
+            }
             return result;
         }
     }
