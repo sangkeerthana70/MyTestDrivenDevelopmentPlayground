@@ -25,7 +25,7 @@ namespace CoinValue
             }                    
             else if (coin == "Dime")
             {
-                return 10;
+                return 15;
             }
             return result;
 
