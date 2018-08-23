@@ -22,13 +22,14 @@ namespace CoinValue
             if (coin == "Quarter")
             {
                 result = 25;
-            }
-            return result;
-            /*
+            }                    
             else if (coin == "Dime")
             {
                 return 10;
             }
+            return result;
+
+            /*
             else if (coin == "Nickel")
             {
 

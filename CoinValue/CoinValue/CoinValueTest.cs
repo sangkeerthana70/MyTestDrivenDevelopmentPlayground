@@ -31,7 +31,14 @@ namespace CoinValue
                 var expected = 25;
                 Console.WriteLine(actual);
                 Assert.AreEqual(actual, expected, "Result should return an integer");           
-
+        }
+        [TestCase("Dime")]
+        public void DimeReturns10(string input)
+        {
+            var actual = coin.GetCoinValue(input);
+            var expected = 10;
+            Console.WriteLine(actual);
+            Assert.IsTrue(actual == expected, "Actual result should return an integer");
         }
 
 
