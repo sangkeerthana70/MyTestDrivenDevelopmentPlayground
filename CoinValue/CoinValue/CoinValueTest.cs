@@ -40,6 +40,14 @@ namespace CoinValue
             Console.WriteLine(actual);
             Assert.IsTrue(actual == expected, "Actual result should return an integer");
         }
+        [TestCase("Nickel")]
+        public void NickelReturns5(string input)
+        {
+            var actual = coin.GetCoinValue(input);
+            var expected = 5;
+            Console.WriteLine(actual);
+            Assert.AreEqual(expected, actual, "Result should return an integer");
+        }
 
 
     }

@@ -25,15 +25,13 @@ namespace CoinValue
             }                    
             else if (coin == "Dime")
             {
-                return 15;
+                return 10;
             }
-            return result;
-
-            /*
             else if (coin == "Nickel")
             {
-
-            }*/
+                return 5;
+            }
+            return result;
         }
     }
 
