@@ -19,7 +19,7 @@ namespace AssessStudentGrade
         public string CalcGrade(int score)
         {
             string grade = "";
-            if ( score >= 97)
+            if ( score > 97)
             {
                 grade = "A+";
                 
@@ -27,6 +27,10 @@ namespace AssessStudentGrade
             if ((score >= 92) && (score <= 97))
             {
                 grade = "A";
+            }
+            if ((score >= 85) && (score <= 91))
+            {
+                grade = "B";
             }
             return grade;
         }

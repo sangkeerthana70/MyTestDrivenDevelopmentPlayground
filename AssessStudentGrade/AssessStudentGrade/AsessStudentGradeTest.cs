@@ -19,12 +19,26 @@ namespace AssessStudentGrade
         [TestCase(98)]
         [TestCase(99)]
         [TestCase(100)]
-        public void Int97ReturnsGradeAPlus(int score)
+        [TestCase(0)]
+        [TestCase(-100)]
+        public void InputIntReturnsAString(int score)
         {
             var actual = grade.CalcGrade(score);
             var expected = "A+";
             Console.WriteLine(actual.GetType());
             Assert.AreEqual(actual.GetType(), expected.GetType(), "Result should be a string");
+            
+        }
+        [TestCase(97)]
+        [TestCase(98)]
+        [TestCase(99)]
+        [TestCase(100)]
+        public void IntGreaterThan97ReturnsGradeAPlus(int score)
+        {
+            var actual = grade.CalcGrade(score);
+            var expected = "A+";
+            Console.WriteLine(actual);
+            Assert.IsTrue(actual == expected, "Actual and expected are different");
 
         }
         [TestCase(92)]
@@ -40,6 +54,23 @@ namespace AssessStudentGrade
             var expected = "A";
             Console.WriteLine(actual);
             Assert.IsTrue(actual == expected, "actual and expected are different");
+        }
+
+        [TestCase(85)]
+        [TestCase(86)]
+        [TestCase(87)]
+        [TestCase(88)]
+        [TestCase(89)]
+        [TestCase(90)]
+        [TestCase(91)]
+        [TestCase(84)]
+        [TestCase(92)]
+        public void Range85to91ReturnsGradeB(int score)
+        {
+            var actual = grade.CalcGrade(score);
+            var expected = "B";
+            Console.WriteLine(actual);
+            Assert.AreEqual(actual, expected, "Result should be a string");
         }
 
 
