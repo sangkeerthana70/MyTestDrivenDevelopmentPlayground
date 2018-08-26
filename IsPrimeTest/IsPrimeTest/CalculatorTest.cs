@@ -28,7 +28,7 @@ namespace Calculator
         }
         [TestCase(7,97)]
         [TestCase(15, 25)]
-        public void addResultGreaterThanInput(int n1, int n2)
+        public void AddResultGreaterThanInput(int n1, int n2)
         {
             //Calculator calculator = new Calculator();
             var actual = calculator.addNumbers(n1,n2);
@@ -38,7 +38,7 @@ namespace Calculator
         [TestCase(15, 25)]
         [TestCase(7, -97)]
         //this method checks for adding two zeros as well
-        public void addTwoPositiveIntegers(int n1, int n2)
+        public void AddTwoPositiveIntegers(int n1, int n2)
         {
             
             var actual = calculator.addNumbers(n1, n2);
@@ -48,7 +48,7 @@ namespace Calculator
         [TestCase(7, -97)]
         [TestCase(15, 25)]
         //this method checks for subtraction
-        public void subtractTwoNumbers(int n1, int n2)
+        public void SubtractTwoNumbers(int n1, int n2)
         {
 
             var actual = calculator.subtractNumbers(n1, n2);
