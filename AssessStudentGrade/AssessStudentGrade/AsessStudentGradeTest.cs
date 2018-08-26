@@ -70,7 +70,37 @@ namespace AssessStudentGrade
             var actual = grade.CalcGrade(score);
             var expected = "B";
             Console.WriteLine(actual);
-            Assert.AreEqual(actual, expected, "Result should be a string");
+            Assert.AreEqual(actual, expected, "actual and expected are not equal");
+        }
+    
+        [TestCase(74)]
+        [TestCase(75)]
+        [TestCase(76)]
+        [TestCase(77)]
+        [TestCase(78)]
+        [TestCase(79)]
+        [TestCase(80)]
+        [TestCase(81)]
+        [TestCase(82)]
+        [TestCase(83)]
+        [TestCase(84)]
+        [TestCase(85)]
+        public void Range75to84ReturnsGradeC(int score)
+        {
+            var actual = grade.CalcGrade(score);
+            var expected = "C";
+            Console.WriteLine(actual);
+            Assert.IsTrue(actual == expected, "Actual is not same as expected");
+        }
+
+        [TestCase(75)]
+        [TestCase(73)]
+        public void IntScoreBelow74ReturnsD(int score)
+        {
+            var actual = grade.CalcGrade(score);
+            var expected = "D";
+            Console.WriteLine(actual);
+            Assert.AreEqual(actual, expected, "actual and expected are different");
         }
 
 

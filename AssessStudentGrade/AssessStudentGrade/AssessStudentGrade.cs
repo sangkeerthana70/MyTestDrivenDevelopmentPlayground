@@ -32,6 +32,14 @@ namespace AssessStudentGrade
             {
                 grade = "B";
             }
+            if ((score >=75) && (score <= 84))
+            {
+                grade = "C";
+            }
+            else
+            {
+                grade = "D";
+            }
             return grade;
         }
     }
